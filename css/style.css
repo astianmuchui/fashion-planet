@@ -1,7 +1,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #fff;
+    background-color: rgb(236, 234, 234);
     overflow-x: hidden;
 }
 
@@ -110,11 +110,11 @@ main span {
 }
 .products-container{
     width: 100%;
-    margin-left: 2%;
+    margin-left: 0.5%;
     display: grid;
 
-    grid-template-columns: repeat(5,1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 1px;
     align-content: center;
     align-items: center;
     justify-items: center;
@@ -164,7 +164,7 @@ main span {
     border: 1px solid #ee5965;
 }
 .blog{
-    height: 100vh;
+    height: max-content;
     width: 100%;
     background-color: rgb(236, 234, 234);
     display: flex;
@@ -176,7 +176,7 @@ main span {
 }
 
 .blog h1{
-    font-weight: 300;
+    font-weight: 600;
     font-size: 30px;
     color: #ee5965;
 }
@@ -201,10 +201,7 @@ main span {
     width: 300px;
     height: 400px;
 }
-.post:hover{
-    transition: all 2s ease-out;
-    transform: translateY(3px);
-}
+
 
 .contact{
     display: flex;
