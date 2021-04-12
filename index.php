@@ -171,6 +171,8 @@
                 <li>footwear</li>
                 <li>jewellery</li>
                 <li>Bags</li>
+                <li>Makeup</li>
+                <li>Hats</li>
             </ul>
         </div>
         <div class="newsletter">

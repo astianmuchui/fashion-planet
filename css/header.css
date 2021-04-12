@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+
+    text-decoration: none;
+    list-style-type: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    display: inline-flex;
+    width: 100%;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    background-color: #ee5965;
+
+}
+
+header nav{
+    margin-left: 45%;
+}
+ header ul{
+     display: inline-flex;
+ }
+
+ header a{
+     color:  rgb(255, 255, 255);
+     font-size: 13px;
+     text-transform: uppercase;
+     padding: 15px;
+ }
+ footer{
+    width: 100%;
+    background-color: black;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+footer .links ul{
+    display: block;
+}
+footer div{
+    width: 25%;
+}
+footer *{
+    color: #fff;
+    text-transform: capitalize;
+}
+footer a{
+    font-size: 14px;
+}
+footer h4{
+    color: #ee5965;
+    font-size: 20px;
+}
+
+.newsletter form .input{
+    width: 250px;
+    height: 45px;
+    margin-right: -3px;
+    border-color: transparent;
+    border-radius: 100px 0 0 100px;
+    padding: 1px;
+    color: black;
+    text-align: center;
+}   
+.newsletter form .submit{
+    background-color: #ee5965;
+    border: #ee5965;
+    height: 53px;
+    width: 70px;
+    border-radius: 0 100px 100px 0;
+    text-align: center;
+}

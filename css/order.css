@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    height: 80vh;
+}
+.image{
+    width: 35%;
+}
+.image img{
+    width: 400px;
+    height: 80vh;
+}
+.details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+.emphatic{
+    font-size: 30px;
+    color: #ee5965;
+    font-weight: 500;
+}
+.ans{
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+}
+.red-btn{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 20px;
+    padding: 10px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: #ee5965;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+.form-container form{
+    display: block;
+}
+.form-container form *{
+    margin-bottom: 10px;
+
+}
+.form-container form input:first-child,
+.form-container form input:nth-child(2),
+.form-container form input:nth-child(3),
+.form-container form input:nth-child(4),
+.form-container form input:nth-child(5),
+.form-container form input:nth-child(6){
+    width: 400px;
+    height: 30px; 
+    border: 1px solid   #ee5965;
+    border-radius: 3px;  
+    padding: 3px 5px; 
+    margin-right: 10px;
+ 
+}
+
+::placeholder{
+    color: #ee5965;
+    opacity: 1;
+}
+
+.form-container form textarea{
+    width: 595px;
+    height: 60px;
+    border: 1px solid   #ee5965;
+    border-radius: 3px;  
+    padding: 3px 5px;  
+}
+.form-grp{
+    width: 100%;
+    display: inline-flex;
+}
+.wide-btn{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 20px;
+    padding: 10px;
+    width: 600px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: #ee5965;
+    color: #fff;
+    text-transform: uppercase;
+}
+input:hover,
+input:active,
+textarea:hover,
+textarea:active{
+    border: 1px solid transparent;
+}
