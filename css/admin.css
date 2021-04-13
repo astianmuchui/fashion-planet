@@ -1,54 +1,68 @@
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-main{
-    margin-top: 3%;
-    margin-bottom: 5%;
+*{
+
+    text-decoration: none;
+    list-style-type: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    display: inline-flex;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    background-color: #ee5965;
+
 }
-.container{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
+
+header nav{
+    margin-left: 25%;
+}
+ header ul{
+     display: inline-flex;
+ }
+
+ header a{
+     color:  rgb(255, 255, 255);
+     font-size: 13px;
+     text-transform: uppercase;
+     padding: 15px;
+ }
+ main{
+     width: 100%;
+     height: 90vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     /* justify-content: center; */
+     align-content: center;
+     justify-items: center;
+ }
+ .bar{
+    margin-top: 3%;
     width: 90%;
-    height: 80vh;
-}
-.image{
-    width: 35%;
-}
-.image img{
-    width: 400px;
-    height: 80vh;
-}
-.details{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-}
-.emphatic{
+    height: 42px;
+    background-color: black;
+   display: inline-flex;
+ }
+ .bar h3{
+     margin-top: 7px;
+    margin-left: 10px;
     font-size: 20px;
-    color: #ee5965;
-    font-weight: 500;
-}
-.ans{
-    font-size: 20px;
-    color: #000;
-    font-weight: 300;
-}
-.red-btn{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+ }
+ .bar a{
+     margin-top: 7px;
+     margin-left: 70%;
+ }
+ .red-btn{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -56,14 +70,19 @@ main{
     justify-content: center;
     justify-items: center;
     height: 20px;
-    padding: 10px;
-    width: 100px;
+    padding: 5px 10px;
+    width: max-content;
     margin-top: 10px;
     border-radius: 6px;
     background-color: #ee5965;
     color: #fff;
     text-transform: uppercase;
-    
+    font-size: 14px;
+}
+.form-container{
+    margin-top: 3%;
+    width: 100%;
+    margin-left: 15%;
 }
 
 .form-container form{
@@ -79,7 +98,7 @@ main{
 .form-container form input:nth-child(4),
 .form-container form input:nth-child(5),
 .form-container form input:nth-child(6){
-    width: 400px;
+    width: 300px;
     height: 30px; 
     border: 1px solid   #ee5965;
     border-radius: 3px;  
@@ -87,14 +106,21 @@ main{
     margin-right: 10px;
  
 }
-
+select{
+    width: 309px;
+    height: 37px; 
+    border: 1px solid   #ee5965;
+    border-radius: 3px;  
+    padding: 3px 5px; 
+    margin-right: 10px;
+}
 ::placeholder{
     color: #ee5965;
     opacity: 1;
 }
 
 .form-container form textarea{
-    width: 586px;
+    width: 943px;
     height: 60px;
     border: 1px solid   #ee5965;
     border-radius: 3px;  

@@ -39,19 +39,19 @@
                 <div class="form-container">
                 <form action="#" method="post">
                     <div class="form-grp">
-                    <input type="text" name="name" id="" placeholder="Enter your name" required> 
-                    <input type="email" name="email" id="" placeholder="Enter your Email" required>
+                    <input type="text" name="name" id="" placeholder="Enter your name" autocomplete="off" required> 
+                    <input type="email" name="email" id="" placeholder="Enter your Email" autocomplete="off" required>
                     </div>
                  <div class="form-grp">
-                    <input type="number" name="phone" id="" required placeholder="phone number (start with 07)"> 
-                    <input type="number" name="quantity" id="" required placeholder="Quantity">
+                    <input type="number" name="phone" id="" required  autocomplete="off" placeholder="phone number (start with 07)"> 
+                    <input type="number" name="quantity" id="" required  autocomplete="off"placeholder="Quantity">
                  </div>
                 <div class="form-grp">
-                <input type="text" name="location" id="" placeholder="County" required>
+                <input type="text" name="location" id="" placeholder="County" autocomplete="off" required>
                 <input type="text" name="" placeholder="size" id="">
                 </div>
                 <div class="big-grp">
-                    <textarea name="" placeholder="Add more information" id="" cols="30" rows="10" required></textarea>
+                    <textarea name="" placeholder="Add more information" id="" cols="30" rows="10" autocomplete="off" required></textarea>
                 <input type="submit" value="submit your order" class="wide-btn"  name="submit">
                 </div>
                 
