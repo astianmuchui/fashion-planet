@@ -1,3 +1,11 @@
+<?php 
+    require '../../server/database.php';
+    $query = "SELECT * FROM products ORDER BY product_id desc";
+    $result = mysqli_query($conn,$query);
+    $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,55 +32,21 @@
         </div>
         <div class="pr">
         <div class="products-container" >
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1000">
-                <img src="../../images/pexels-melvin-buezo-2529148.jpg" alt="">
-                <p>Nike shoe</p>
-                <div class="border"></div>
-                <p>ksh 2500</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">Order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="../../images/pexels-artem-beliaikin-1078975.jpg" alt="">
-                <p>Cool hat</p>
-                <div class="border"></div>
-                <p>ksh 500</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="../../images/pexels-ge-yonk-1152077.jpg" alt="">
-                <p>handbag</p>
-                <div class="border"></div>
-                <p>ksh 1200</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="../../images/pexels-pixabay-47856.jpg" alt="">
-                <p>watch</p>
-                <div class="border"></div>
-                <p>ksh 1000</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="../../images/pexels-erik-mclean-4061385.jpg" alt="">
-                <p>Nike sneakers</p>
-                <div class="border"></div>
-                <p>ksh 3000</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
 
+            <?php foreach($products as $product):?>
+            <?php
+                $img_URL = "../../admin/products/".$product['product_image'];
+                ?>
             <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="../../images/pexels-cottonbro-5054541.jpg" alt="">
-                <p>smart watch</p>
+                <img src="<?php echo $img_URL; ?>" alt="">
+                <p><?php echo $product['product_name']; ?></p>
                 <div class="border"></div>
-                <p>ksh 300</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
+                <p><?php echo $product['price'];?></p>
+                <span><?php echo $product['availability']; ?></span>
+                <a href="../order/index.php?id=<?php echo $product['product_id']; ?>" class="red-btn">order</a>
             </div>
+            <?php endforeach; ?>
+            
         
         </div>
         </div>
