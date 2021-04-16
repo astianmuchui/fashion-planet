@@ -1,5 +1,13 @@
 <?php
-
+    //New arrivals interface
+    require "./server/database.php";
+    $query = "SELECT * FROM `products` ORDER BY `product_id` desc LIMIT 6";
+    $result = mysqli_query($conn,$query);
+    $goods = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    mysqli_close($conn);
+    
+    
 ?>
 
 <!DOCTYPE html>
@@ -15,17 +23,17 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./images/logo.png" height="47" width="166.66" alt="">
+            <a href="./"><img src="./images/logo.png" height="47" width="166.66" alt=""></a>
+            
         </div>
 
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#">Orders</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="./pages/shop/">Products</a></li>
             </ul>
         </nav>
     </header>
@@ -45,59 +53,22 @@
     </main>
 
     <section class="section-one" id="products">
-        <h1>Available products</h1>
+        <h1>Newest Arrivals</h1>
         
         <div class="products-container" >
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1000">
-                <img src="./images/pexels-melvin-buezo-2529148.jpg" alt="">
-                <p>Nike shoe</p>
+        <?php foreach($goods as $product):?>
+            <?php
+                $img_URL = "./admin/products/".$product['product_image'];
+                ?>
+            <div class="product-card"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <img src="<?php echo $img_URL; ?>" alt="">
+                <p><?php echo $product['product_name']; ?></p>
                 <div class="border"></div>
-                <p>ksh 2500</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">Order</a>
+                <p><?php echo $product['price'];?></p>
+                <span><?php echo $product['availability']; ?></span>
+                <a href="./pages/order/index.php?id=<?php echo $product['product_id']; ?>" class="red-btn">order</a>
             </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="images/pexels-artem-beliaikin-1078975.jpg" alt="">
-                <p>Cool hat</p>
-                <div class="border"></div>
-                <p>ksh 500</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="images/pexels-ge-yonk-1152077.jpg" alt="">
-                <p>handbag</p>
-                <div class="border"></div>
-                <p>ksh 1200</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="images/pexels-pixabay-47856.jpg" alt="">
-                <p>watch</p>
-                <div class="border"></div>
-                <p>ksh 1000</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="images/pexels-erik-mclean-4061385.jpg" alt="">
-                <p>Nike sneakers</p>
-                <div class="border"></div>
-                <p>ksh 3000</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-
-            <div class="product-card"  data-aos="flip-left" data-aos-duration="1500">
-                <img src="images/pexels-cottonbro-5054541.jpg" alt="">
-                <p>smart watch</p>
-                <div class="border"></div>
-                <p>ksh 300</p>
-                <span>Available</span>
-                <a href="#" class="red-btn">order</a>
-            </div>
-        
+            <?php endforeach; ?>
         </div>
         
     </section>
@@ -105,25 +76,25 @@
         <h1>Our latest posts</h1>
 
         <div class="posts" >
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="2000" data-aos-delay="500">
+            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="0">
                 <img src="./images/pexels-godisable-jacob-965324.jpg" alt="">
                 <p>Best dress codes 2021</p>
                 <div class="border"></div>
                 <a href="#" class="red-btn">View post</a>
             </div>
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="2000" data-aos-delay="900">
+            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="900">
                 <img src="./images/pexels-torsten-dettlaff-437037.jpg" alt="">
                 <p>Best watches for men 2021</p>
                 <div class="border"></div>
                 <a href="#" class="red-btn">View post</a>
             </div>
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="2000" data-aos-delay="1500">
+            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="1500">
                 <img src="./images/pexels-jordan-hyde-1032110.jpg" alt="">
                 <p>Best shoes 2021</p>
                 <div class="border"></div>
                 <a href="#" class="red-btn">View post</a>
             </div>
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="2000" data-aos-delay="2000">
+            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="2000">
                 <img src="./images/pexels-melvin-buezo-2529147.jpg" alt="">
                 <p>Most expensive shoes</p>
                 <div class="border"></div>
@@ -165,7 +136,7 @@
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#">Orders</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="./pages/shop/">Products</a></li>
             </ul>
         </div>
         <div class="categories">

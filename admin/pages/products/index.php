@@ -1,6 +1,6 @@
 <?php
     require '../config.php';
-    $passcode = 125525;
+    $passcode = "kamankura1";
     $errors = array();
     function UploadProduct($name,$image,$price,$status,$category,$info,$password){
         global $passcode,$conn,$errors;        

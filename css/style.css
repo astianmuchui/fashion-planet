@@ -4,7 +4,9 @@ body{
     background-color: rgb(236, 234, 234);
     overflow-x: hidden;
 }
-
+    html{
+        scroll-behavior: smooth;
+    }
 
 *{
 
