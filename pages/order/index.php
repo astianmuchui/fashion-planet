@@ -1,8 +1,13 @@
 <?php
-            
+    session_start();        
     if(isset($_GET['id'])){
         require '../../server/database.php';
-        $URL_ID = $_GET['id'];
+        
+        if(isset($_GET['auto'])){
+            $key = $_GET['auto'];
+        }
+        $URL_ID = $_GET['id']/$key;
+        
         $query = "SELECT * FROM products WHERE products.product_id = $URL_ID";
         $result = mysqli_query($conn,$query);
         $product = mysqli_fetch_assoc($result);
@@ -11,7 +16,7 @@
         if($product){
             //
         }else{
-            header("Location: ../shop");
+            // header("Location: ../shop");
         }
         $img_URL = "../../admin/products/".$product['product_image'];
     }else{
@@ -37,7 +42,10 @@
         $query = "INSERT INTO orders (`product`,`cost`,`name`,`email`,`phone`,`quantity`,`county`,`size`,`info`) VALUES('$productName','$productCost','$name','$email','$phone','$quantity','$location','$size','$info')";
         $action = mysqli_query($conn,$query);
         if($action){
-            echo 'Order placed';
+
+            $_SESSION['name'] = $name;
+            $_SESSION['email'] = $email;
+            header("Location: ../thankyou/");
         }else{
             echo 'Order not placed';
 

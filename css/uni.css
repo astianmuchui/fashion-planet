@@ -1,0 +1,82 @@
+main{
+    height: 90vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+.emphatic{
+    color: #ee5965;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+label{
+    color: #ee5965;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+.form-container form *{
+    margin-bottom: 10px;
+
+}
+.form-container select{
+    width: 400px;
+    height: 30px; 
+    border: 1px solid   #ee5965;
+    border-radius: 3px;  
+    padding: 3px 5px; 
+    margin-right: 10px;
+}
+.form-container form input:first-child,
+.form-container form input:nth-child(2),
+.form-container form input:nth-child(3),
+.form-container form input:nth-child(4),
+.form-container form input:nth-child(5),
+.form-container form input:nth-child(6){
+    width: 400px;
+    height: 30px; 
+    border: 1px solid   #ee5965;
+    border-radius: 3px;  
+    padding: 3px 5px; 
+    margin-right: 10px;
+ 
+}
+
+::placeholder{
+    color: #ee5965;
+    opacity: 1;
+}
+
+.form-container form textarea{
+    width: 586px;
+    height: 100px;
+    border: 1px solid   #ee5965;
+    border-radius: 3px;  
+    padding: 3px 5px;  
+}
+.form-grp{
+    width: 100%;
+    display: inline-flex;
+}
+
+.red-btn{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 20px;
+    padding: 10px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: #ee5965;
+    color: #fff;
+    text-transform: uppercase;
+    
+}

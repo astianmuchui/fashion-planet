@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require '../../server/database.php';
     $query = "SELECT * FROM products ORDER BY product_id desc";
     $result = mysqli_query($conn,$query);
@@ -43,7 +44,12 @@
                 <div class="border"></div>
                 <p><?php echo $product['price'];?></p>
                 <span><?php echo $product['availability']; ?></span>
-                <a href="../order/index.php?id=<?php echo $product['product_id']; ?>" class="red-btn">order</a>
+                <?php
+                $_SESSION['secure_id'] = rand(10000,2558897970000);
+                $secureID = $product['product_id']*$_SESSION['secure_id'];
+                
+                ?>
+                <a href="../order/index.php?id=<?php echo $secureID; ?>&auto=<?php echo $_SESSION['secure_id'] ?>" class="red-btn">order</a>
             </div>
             <?php endforeach; ?>
             
