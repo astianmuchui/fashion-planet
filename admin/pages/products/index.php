@@ -43,7 +43,7 @@
                                 if($action){
                                     echo 'Uploaded succesfully';
                                 }else{
-                                    echo 'Failed to add assignment';
+                                    echo 'Failed to add product';
                                     return false;
                                 }
                             
@@ -78,7 +78,6 @@
         $category = $_POST['category'];
         $password = $_POST['pass'];
         $info = $_POST['info'];
-
         UploadProduct($name,$image,$price,$status,$category,$info,$password);
     }
 

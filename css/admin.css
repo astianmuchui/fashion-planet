@@ -150,5 +150,5 @@ input:hover,
 input:active,
 textarea:hover,
 textarea:active{
-    border: 1px solid transparent;
+    border: 1px solid #ee5965;
 }

@@ -1,11 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/adm.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/time.css">
     <title>Admin panel</title>
 </head>
 <body>
@@ -16,8 +20,8 @@
         <nav>
             <ul>
                 <li><a href="#">Welcome,Admin</a></li>
-                <li><a href="#">New product</a></li>
-                <li><a href="#">Add to Blog</a></li>
+                <li><a href="./pages/products/">New product</a></li>
+                <li><a href="./pages/blog/">Add to Blog</a></li>
                 <li><a href="#">Contact clients</a></li>
                 <li><a href="#">My Orders</a></li>
                 <li><a href="#">My products</a></li>
@@ -25,33 +29,53 @@
             </ul>
         </nav>
     </header>
-
     <main>  
-          <div class="breadcrumb"> <i class="fas fa-users-cog fa-2x"></i> Dashmin</div>
+
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/time.css"/>
+    <title>Theme Clock</title>
+  </head>
+  <body>
+
+    <button class="toggle" style="opacity: 0;" >Dark mode</button>
+
+    <div class="clock-container">
+      <div class="clock">
+        <div class="needle hour"></div>
+        <div class="needle minute"></div>
+        <div class="needle second"></div>
+        <div class="center-point"></div>
+      </div>
+
+      <div class="time"></div>
+      <div class="date"></div>
+    </div>
+
+    <script src="../js/time.js"></script>
+  </body>
+</html>
         <section>
             <div class="stats">
                 <div>
-                    <h4 class="pink-breadcrumb">Today's Statistics</h4>
+                    <h4 class="pink-breadcrumb"> Statistics</h4>
                     <ul>
                         <label>Orders</label>
-                        <li>  <meter min="0" max="100" value="20"></meter> <small class="counter">20%</small>  </li>
+                        <li>  <meter min="0" max="100" value="4"></meter> <small class="counter">4%</small>  </li>
                         <label>Posts</label>
                         <li> <meter min="0" max="100" value="40"></meter> <small class="counter">40%</small> </li>
                         <label>Testimonials</label>
-                        <li> <meter min="0" max="100" value="80"></meter> <small class="counter">80%</small></li>
+                        <li> <meter min="0" max="100" value="3"></meter> <small class="counter">3 </small></li>
                         <label>Messages</label>
                         <li><meter min="0" max="100" value="5"></meter> <small class="counter">5%</small> </li>
                     </ul>
-                    <div class="breadcrumb">New Messages</div>
-                    
+                     
+                       
 
-                    <p class="message">
-                        <small>John michigan</small>
-                        <small>Your services are out of this world</small>
-                        <small>2021 04-12 16:23</small>
-                        <small><a href="#" class="btn">Reply</a></small>
-                    </p>
-                </div>
+                 </div>
                 
                 
             </div>
@@ -60,14 +84,15 @@
                     <h4 class="pink-breadcrumb">Website Overview</h4>
                     <div class="grid-container">
                         <div class="card"><i class="fas fa-pencil-alt fa-2x"></i> 100 <br> posts</div>
-                        <div class="card"><i class="fas fa-sort fa-2x" ></i> 200 <br> orders</div>
-                       <div class="card"><i class="fas fa-boxes fa-2x"></i> 100 <br> products</div>
+                        <div class="card"><i class="fas fa-sort fa-2x" ></i> 4 <br> orders</div>
+                       <div class="card"><i class="fas fa-boxes fa-2x"></i> 5 <br> products</div>
                         <div class="card"><i class="fas fa-signal fa-2x"></i> 100 <br> subscribers</div>
                     </div>
                 </div>
-                <div class="latest">
+                <div class="latest" id="latest">
                     <h4 class="pink-breadcrumb">Newest Orders</h4>
                     <table>
+                                        
                         <tr class="pink-breadcrumb">
                             <th>Name</th>
                             <th>Email</th>
@@ -76,58 +101,69 @@
                             <th>Date</th>
                             <th>Details</th>
                         </tr>
-                        <tr>
-                            <td>Jill smith</td>
-                            <td>test@gmail.com</td>
-                            <td>0797061691</td>
-                            <td>Nike shoes</td>
-                            <td><small>2021 04-12 16:23</small></td>
-                            <td><a href="#" class="btn">View</a></td>
+                                                <tr>
+                            <td>Tom Tam</td>
+                            <td>tam@gmail.com</td>
+                            <td>075646468</td>
+                            <td>Nike</td>
+                            <td><small>2021-04-17 11:59</small></td>
+                            <td><a href="./pages/view-order/?AreaID=6" class="btn">View</a></td>
                         </tr>
-                        <tr>
-                            <td>Jill smith</td>
-                            <td>test@gmail.com</td>
-                            <td>0797061691</td>
-                            <td>Nike shoes</td>
-                            <td><small>2021 04-12 16:23</small></td>
-                            <td><a href="#" class="btn">View</a></td>
+                                                <tr>
+                            <td>Hunter hearst</td>
+                            <td>hunterhearst16@gmail.com</td>
+                            <td>0756423198</td>
+                            <td>Nike</td>
+                            <td><small>2021-04-16 17:35</small></td>
+                            <td><a href="./pages/view-order/?AreaID=4" class="btn">View</a></td>
                         </tr>
-                        <tr>
-                            <td>Jill smith</td>
-                            <td>test@gmail.com</td>
-                            <td>0797061691</td>
-                            <td>Nike shoes</td>
-                            <td><small>2021 04-12 16:23</small></td>
-                            <td><a href="#" class="btn">View</a></td>
+                                                <tr>
+                            <td>Merlin chalmers</td>
+                            <td>merlin@chalmers.com</td>
+                            <td>0715664889</td>
+                            <td>watch</td>
+                            <td><small>2021-04-16 17:22</small></td>
+                            <td><a href="./pages/view-order/?AreaID=3" class="btn">View</a></td>
                         </tr>
-                        <tr>
-                            <td>Jill smith</td>
-                            <td>test@gmail.com</td>
-                            <td>0797061691</td>
-                            <td>Nike shoes</td>
-                            <td><small>2021 04-12 16:23</small></td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>                    <tr>
-                            <td>Jill smith</td>
-                            <td>test@gmail.com</td>
-                            <td>0797061691</td>
-                            <td>Nike shoes</td>
-                            <td><small>2021 04-12 16:23</small></td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>                    <tr>
-                            <td>Jill smith</td>
-                            <td>test@gmail.com</td>
-                            <td>0797061691</td>
-                            <td>Nike shoes</td>
-                            <td><small>2021 04-12 16:23</small></td>
-                            <td><a href="#" class="btn">View</a></td>
+                                                <tr>
+                            <td>Seb Astian</td>
+                            <td>astianseb730@gmail.com</td>
+                            <td>0783685569</td>
+                            <td>sport shoes</td>
+                            <td><small>2021-04-15 18:01</small></td>
+                            <td><a href="./pages/view-order/?AreaID=2" class="btn">View</a></td>
                         </tr>
+                                          
                     </table>
+                    
+                </div>
+
+                <div class="pink-breadcrumb">Latest Testimonials</div>
+                <div class="grid-4">
+                    <p class="message">
+                        <small>Karan jamal</small>
+                        <small>So awesome</small>
+                        <small>2021-04-17 12:00</small>
+                        <small><a href="mailto:jamal@gmail.com" class="btn">Reply</a></small>
+                    </p>
+                       
+                    <p class="message">
+                        <small>Hunter hearst</small>
+                        <small>Its awesome</small>
+                        <small>2021-04-16 17:36</small>
+                        <small><a href="mailto:hunterhearst16@gmail.com" class="btn">Reply</a></small>
+                    </p>
+                       
+                    <p class="message">
+                        <small>Merlin chalmers</small>
+                        <small>I think this is one of the best places to shop</small>
+                        <small>2021-04-16 17:33</small>
+                        <small><a href="mailto:merlin@gmail.com" class="btn">Reply</a></small>
+                    </p>
                 </div>
             </div>
         </section>
-    </main>
-    <script src="../js/time.js"></script>   
+    </main>                        
     <script src="../js/font_awesome_main.js"></script>
 </body>
 </html>

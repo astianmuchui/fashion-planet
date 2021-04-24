@@ -100,6 +100,7 @@ main{
     background-color: rgb(245, 245, 245);
     padding-bottom: 9px;
     border-radius: 3px;
+    margin-bottom: 10px;
 }
 .product-card img{
     width: 200px;

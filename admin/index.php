@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../css/adm.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/time.css">
@@ -19,8 +18,8 @@
         <nav>
             <ul>
                 <li><a href="#">Welcome,Admin</a></li>
-                <li><a href="#">New product</a></li>
-                <li><a href="#">Add to Blog</a></li>
+                <li><a href="./pages/products/">New product</a></li>
+                <li><a href="./pages/blog/">Add to Blog</a></li>
                 <li><a href="#">Contact clients</a></li>
                 <li><a href="#">My Orders</a></li>
                 <li><a href="#">My products</a></li>
@@ -45,17 +44,7 @@
                         <label>Messages</label>
                         <li><meter min="0" max="100" value="5"></meter> <small class="counter">5%</small> </li>
                     </ul>
-                    <div class="breadcrumb">New Testimonials</div>
-                    
-                    <?php require '../server/get_testimonial.php'; ?> 
-                    <?php foreach($testimonials as $testimonial): ?>   
-                    <p class="message">
-                        <small><?php echo $testimonial['name']; ?></small>
-                        <small><?php echo $testimonial['body']; ?></small>
-                        <small><?php echo substr($testimonial['time'],0,16); ?></small>
-                        <small><a href="mailto:<?php echo $testimonial['email']; ?>" class="btn">Reply</a></small>
-                    </p>
-                    <?php endforeach;?>
+
                 </div>
                 
                 
@@ -64,7 +53,7 @@
                 <div class="overview">
                     <h4 class="pink-breadcrumb">Website Overview</h4>
                     <div class="grid-container">
-                        <div class="card"><i class="fas fa-pencil-alt fa-2x"></i> 100 <br> posts</div>
+                        <div class="card"><i class="fas fa-pencil-alt fa-2x"></i> <?php require '../server/count_posts.php';?> <br> posts</div>
                         <div class="card"><i class="fas fa-sort fa-2x" ></i> <?php require '../server/count_orders.php'; ?> <br> orders</div>
                        <div class="card"><i class="fas fa-boxes fa-2x"></i> <?php require_once '../server/count_products.php'; ?> <br> products</div>
                         <div class="card"><i class="fas fa-signal fa-2x"></i> 100 <br> subscribers</div>
@@ -90,10 +79,24 @@
                             <td><?php echo $order['phone']; ?></td>
                             <td><?php echo $order['product']; ?></td>
                             <td><small><?php echo substr($order['time'],0,16); ?></small></td>
-                            <td><a href="#" class="btn">View</a></td>
+                            <td><a href="./pages/view-order/?AreaID=<?php echo $order['id']?>" class="btn">View</a></td>
                         </tr>
                         <?php endforeach; ?>
+                    
                     </table>
+                </div>
+                <div class="pink-breadcrumb">Latest Testimonials</div>
+                <div class="grid-4">
+                    
+                    <?php require '../server/get_testimonial.php'; ?> 
+                    <?php foreach($testimonials as $testimonial): ?>   
+                    <p class="message">
+                        <small><?php echo $testimonial['name']; ?></small>
+                        <small><?php echo $testimonial['body']; ?></small>
+                        <small><?php echo substr($testimonial['time'],0,16); ?></small>
+                        <small><a href="mailto:<?php echo $testimonial['email']; ?>" class="btn">Reply</a></small>
+                    </p>
+                    <?php endforeach;?>
                 </div>
             </div>
         </section>

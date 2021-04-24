@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+section {
+    width: 90%;
+}
+.form-group{
+    margin-top: 30px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
+.form-group input{
+    width: 98%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #ee5965;
+    color: #ee5965;
+}
+
+::placeholder{
+    color: #ee5965;
+}
+textarea{
+
+    width: 89.35%;
+    background: transparent;
+    border: 1px solid #ee5965;
+    color: #ee5965;
+}
+.btn{
+    text-decoration: none;
+    color: black;
+    background-color: #ee5965;
+    border: 1px solid #ee5965;
+    border-radius: 5%;
+    padding: 10px 20px;
+    width: 90%;
+}

@@ -59,12 +59,11 @@ footer h4{
     color: #ee5965;
     font-size: 20px;
 }
-
 .newsletter form .input{
     width: 250px;
     height: 45px;
     margin-right: -3px;
-    border-color: transparent;
+    border-color: white;
     border-radius: 100px 0 0 100px;
     padding: 1px;
     color: black;

@@ -7,7 +7,7 @@
     mysqli_free_result($result);
     mysqli_close($conn);
     
-    
+    //Contact form
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/aos_min.css">
     <title>I&J | Welcome</title>
 </head>
 <body>
@@ -81,31 +80,16 @@
         <h1>Our latest posts</h1>
 
         <div class="posts" >
+            <?php require './server/get_latest_posts.php'; ?>
+            <?php foreach ($posts as $post):?>
+                <?php $URL_IMG = "./admin/posts/".$post['image']; ?>
             <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="0">
-                <img src="./images/pexels-godisable-jacob-965324.jpg" alt="">
-                <p>Best dress codes 2021</p>
+                <img src="<?php echo $URL_IMG; ?>" alt="Image">
+                <p><?php echo $post['title']; ?></p>
                 <div class="border"></div>
                 <a href="#" class="red-btn">View post</a>
             </div>
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="900">
-                <img src="./images/pexels-torsten-dettlaff-437037.jpg" alt="">
-                <p>Best watches for men 2021</p>
-                <div class="border"></div>
-                <a href="#" class="red-btn">View post</a>
-            </div>
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="1500">
-                <img src="./images/pexels-jordan-hyde-1032110.jpg" alt="">
-                <p>Best shoes 2021</p>
-                <div class="border"></div>
-                <a href="#" class="red-btn">View post</a>
-            </div>
-            <div class="post" data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="1000" data-aos-delay="2000">
-                <img src="./images/pexels-melvin-buezo-2529147.jpg" alt="">
-                <p>Most expensive shoes</p>
-                <div class="border"></div>
-                <a href="#" class="red-btn">view post</a>
-            </div>
-
+            <?php endforeach; ?>
             
         </div>
 
@@ -113,13 +97,13 @@
     <section class="contact" id="contact">
         <h1 data-aos="fade-up" data-aos-easing="ease-out"  data-aos-duration="500">Reach us today !</h1>
         <div class="form-container">
-            <form action="#" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <label>Your Name</label> <br>
                 <input type="text" name="name" id="" required> <br>
                 <label>Your Email</label> <br>
                 <input type="email" name="email" id="" required> <br>
                 <label>Phone Number</label> <br>
-                <input type="number" name="phone" id="" required placeholder="start with 07"> <br>
+                <input type="number" name="phone" id="" required placeholder="start with 07" required> <br>
                 <label>Message</label> <br>
                 <textarea name="message" id="" cols="30" rows="10" required></textarea> <br>
                 <input type="submit" value="send message" name="submit" class="red-btn">
@@ -163,7 +147,7 @@
             </form>
         </div>
     </footer>
-    <script src="./js/scroll_min.js"></script>
+    
     <script src="./js/type_min.js"></script>
     <script src="./js/ops.js"></script>
 </body>
