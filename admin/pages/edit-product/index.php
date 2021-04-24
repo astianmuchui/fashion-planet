@@ -1,9 +1,9 @@
 <?php
     // Get ID
     $ROOT_URL = "../my-products/";
-    function redirect($ROOT_URL){
+    function redirect(){
         global $ROOT_URL;
-        header("Location $ROOT_URL");
+        header("Location: ../my-products/");
     }
     $passcode = "kamankura1";
     $errors = array();
@@ -50,7 +50,7 @@
                                 $action = mysqli_query($conn,$query); 
                             endforeach; 
                                 if($action){
-                                    echo 'Updated succesfully';
+                                    redirect();
                                 }else{
                                     array_push($errors ,'Failed');
                                     echo 'Failed to add product';
@@ -91,7 +91,7 @@
         if($product){
             //Id is correct
         }else{
-            redirect($ROOT_URL);
+            redirect();
         }
         mysqli_free_result($result);
    
@@ -110,7 +110,7 @@
     
         }
     }else{
-        redirect($ROOT_URL);
+        redirect();
     }
 
 ?>

@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/products.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.min.css">
     <title>All products</title>
 </head>
 <body>
@@ -28,6 +29,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Status</th>
+                <th>Time added</th>
                 <th>Action</th>    
             </tr>
             <?php foreach ($products as $product): ?>
@@ -37,12 +39,13 @@
                 <td><?php echo $product['product_name'] ?></td>
                 <td><?php echo $product['price']; ?></td>
                 <td><?php echo $product['availability'];?></td>
-                <td><a href="../edit-product/?id=<?php echo $product['product_id']; ?>" class="btn">Edit</a> <a href="../delete-product/?id=<?php echo $product['product_id'];?>" class="btn">Delete</a> </td>
+                <td> <small><?php echo substr($product['time'],0,16); ?></small> </td>
+                <td><a href="../edit-product/?id=<?php echo $product['product_id']; ?>" class="btn"> <i class="fas fa-pencil-alt"></i> Edit</a> <a href="../delete-product/?id=<?php echo $product['product_id'];?>" class="btn"> <i class="fas fa-trash-alt"></i> Delete</a> </td>
             </tr>
             <?php endforeach; ?>
         </table>
     </main>
 
-
+                <script src="../../../js/font_awesome_main.js"></script>
 </body>
 </html>

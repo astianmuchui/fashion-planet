@@ -134,3 +134,7 @@ textarea:hover,
 textarea:active{
     border: 1px solid transparent;
 }
+.flex-container{
+    display: inline-flex;
+    width: 100%;
+}

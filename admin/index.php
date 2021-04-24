@@ -17,12 +17,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Welcome,Admin</a></li>
+                <li><a href="./">Welcome,Admin</a></li>
                 <li><a href="./pages/products/">New product</a></li>
                 <li><a href="./pages/blog/">Add to Blog</a></li>
                 <li><a href="#">Contact clients</a></li>
-                <li><a href="#">My Orders</a></li>
-                <li><a href="#">My products</a></li>
+                <li><a href="./pages/orders/">My Orders</a></li>
+                <li><a href="./pages/my-products/">My products</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </nav>
@@ -38,9 +38,9 @@
                         <label>Orders</label>
                         <li>  <meter min="0" max="100" value="<?php require '../server/count_orders.php'; ?>"></meter> <small class="counter"><?php require '../server/count_orders.php';  ?>%</small>  </li>
                         <label>Posts</label>
-                        <li> <meter min="0" max="100" value="40"></meter> <small class="counter">40%</small> </li>
+                        <li> <meter min="0" max="100" value="<?php require '../server/count_posts.php';?>"></meter> <small class="counter"><?php require '../server/count_posts.php';?> %</small> </li>
                         <label>Testimonials</label>
-                        <li> <meter min="0" max="100" value="<?php require '../server/count_testimonials.php'; ?>"></meter> <small class="counter"><?php require '../server/count_testimonials.php'; ?> </small></li>
+                        <li> <meter min="0" max="100" value="<?php require '../server/count_testimonials.php'; ?>"></meter> <small class="counter"><?php require '../server/count_testimonials.php'; ?> %</small></li>
                         <label>Messages</label>
                         <li><meter min="0" max="100" value="5"></meter> <small class="counter">5%</small> </li>
                     </ul>

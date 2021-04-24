@@ -36,6 +36,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/order.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.min.css">
     <title>Order by <?php echo $order['name']?></title>
 </head>
 <body>
@@ -63,10 +64,13 @@
                     
                 </small>
                     <div class="desc">
-                        <h3 class="emphatic">Contact Client</h3>
-                    <span class="emphatic"> <a href="mailto: <?php echo $order['email'];?>" class="red-btn">Send Email</a></span>
-                    <span class="emphatic"> <a href="tel:<?php echo $country_code.$trim; ?>" class="red-btn">Make Call</a></span>    
-                    <span class="emphatic"> <a href="https://web.whatsapp.com/send?phone=<?php echo $country_code.$trim; ?>&text=hi <?php echo $order['name']; ?>2C&source&data&app_absent" class="red-btn">Whatsapp</a></span>
+                        <h3 class="emphatic">Contact Client</h3> 
+                        <div class="flex-container">
+                        <span class="emphatic"> <a href="mailto: <?php echo $order['email'];?>" class="red-btn"><i class="far fa-envelope"></i></a></span>
+                    <span class="emphatic"> <a href="tel:<?php echo $country_code.$trim; ?>" class="red-btn"><i class="fas fa-phone-alt"></i></a></span>    
+                    <span class="emphatic"> <a href="https://web.whatsapp.com/send?phone=<?php echo $country_code.$trim; ?>&text=hi <?php echo $order['name']; ?>2C&source&data&app_absent" class="red-btn"> <i class="fab fa-whatsapp"></i> </a></span>
+                        </div>
+                    
                     </div>
                 <br>
                 
@@ -74,6 +78,6 @@
         </div>
     </main>
 
-
+    <script src="../../../js/font_awesome_main.js"></script>
 </body>
 </html>

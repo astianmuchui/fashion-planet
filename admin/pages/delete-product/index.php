@@ -1,8 +1,8 @@
 <?php
     $ROOT_URL = "../my-products/";
-    function redirect($ROOT_URL){
-        global $ROOT_URL;
-        header("Location $ROOT_URL");
+    function redirect(){
+        // global $ROOT_URL;
+        header("Location: ../my-products");
     }
     if(isset($_GET['id'])){
         $PRODUCTID = $_GET['id'];
@@ -14,7 +14,7 @@
         if($product){
             //Id is correct
         }else{
-            redirect($ROOT_URL);
+            redirect();
         }
         mysqli_free_result($result);
    
@@ -25,11 +25,11 @@
             $query = "DELETE FROM `products` WHERE `products`.`product_id` = $PRODUCTID";
             $sql_action = mysqli_query($conn,$query);
             if($sql_action){
-                echo "Deleted";
+                redirect();
             }
         }
     }else{
-        redirect($ROOT_URL);
+        redirect();
     }
 ?>
 <!DOCTYPE html>
