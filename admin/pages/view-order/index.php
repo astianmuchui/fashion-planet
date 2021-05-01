@@ -54,20 +54,20 @@
                 <span class="emphatic">Price : <span class="ans"><?php echo $order['cost']; ?></span></span>
                 <span class="emphatic">County : <span class="ans"><?php echo $order['county']; ?></span></span>
                 <span class="emphatic">Size : <span class="ans"><?php echo $order['size']; ?></span></span>
-               
+                <span class="emphatic">Mobile No. : <span class="ans"><?php echo $order['phone']; ?></span></span>
                 <small class="desc">
                     <div class="emphatic">
                         Details :
                     </div>   
                     <?php echo $order['info']; ?>
-
+                    <a href="../generate-invoice/index.php?AreaID=<?php echo $order['id']; ?>" target="_blank" class="red-btn">Invoice</a>
                     
                 </small>
                     <div class="desc">
                         <h3 class="emphatic">Contact Client</h3> 
                         <div class="flex-container">
-                        <span class="emphatic"> <a href="mailto: <?php echo $order['email'];?>" class="red-btn"><i class="far fa-envelope"></i></a></span>
-                    <span class="emphatic"> <a href="tel:<?php echo $country_code.$trim; ?>" class="red-btn"><i class="fas fa-phone-alt"></i></a></span>    
+                        <span class="emphatic"> <a href="mailto: <?php echo $order['email'];?>" class="red-btn"><i class="far fa-envelope"></i> </a></span>
+                    
                     <span class="emphatic"> <a href="https://web.whatsapp.com/send?phone=<?php echo $country_code.$trim; ?>&text=hi <?php echo $order['name']; ?>2C&source&data&app_absent" class="red-btn"> <i class="fab fa-whatsapp"></i> </a></span>
                         </div>
                     

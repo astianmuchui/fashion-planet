@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +16,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="./">Welcome,Admin</a></li>
+                <li><a href="./">Home</a></li>
                 <li><a href="./pages/products/">New product</a></li>
-                <li><a href="./pages/blog/">Add to Blog</a></li>
-                <li><a href="#">Contact clients</a></li>
-                <li><a href="./pages/orders/">My Orders</a></li>
+                <li><a href="./pages/blog/">Add post</a></li>
+                <li><a href="./pages/contact-clients/">Contact clients</a></li>
+                <li><a href="#">Subscribers</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="./pages/orders/"> Orders</a></li>
                 <li><a href="./pages/my-products/">My products</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
@@ -42,7 +43,7 @@
                         <label>Testimonials</label>
                         <li> <meter min="0" max="100" value="<?php require '../server/count_testimonials.php'; ?>"></meter> <small class="counter"><?php require '../server/count_testimonials.php'; ?> %</small></li>
                         <label>Messages</label>
-                        <li><meter min="0" max="100" value="5"></meter> <small class="counter">5%</small> </li>
+                        <li><meter min="0" max="100" value="<?php require '../server/count_messages.php'; ?>"></meter> <small class="counter"><?php require '../server/count_messages.php'; ?> %</small> </li>
                     </ul>
 
                 </div>
@@ -56,7 +57,7 @@
                         <div class="card"><i class="fas fa-pencil-alt fa-2x"></i> <?php require '../server/count_posts.php';?> <br> posts</div>
                         <div class="card"><i class="fas fa-sort fa-2x" ></i> <?php require '../server/count_orders.php'; ?> <br> orders</div>
                        <div class="card"><i class="fas fa-boxes fa-2x"></i> <?php require_once '../server/count_products.php'; ?> <br> products</div>
-                        <div class="card"><i class="fas fa-signal fa-2x"></i> 100 <br> subscribers</div>
+                        <div class="card"><i class="fas fa-signal fa-2x"></i> <?php require '../server/count_subscribers.php'; ?> <br> subscribers</div>
                     </div>
                 </div>
                 <div class="latest" id="latest">

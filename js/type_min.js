@@ -1,5 +1,4 @@
 //Typewriter animation
-
 const TypeWriter = function(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
@@ -28,7 +27,7 @@ const TypeWriter = function(txtElement, words, wait = 3000) {
     } else if(this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       this.wordIndex++;
-      typeSpeed = 500;
+      typeSpeed = 1000;
     }
     setTimeout(() => this.type(), typeSpeed);
   }

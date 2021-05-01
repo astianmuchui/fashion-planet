@@ -97,7 +97,7 @@ function __construct($orientation='P', $unit='mm', $size='A4')
 	// Font path
 	if(defined('FPDF_FONTPATH'))
 	{
-		$this->fontpath = FPDF_FONTPATH;
+		$this->fontpath = "FPDF_FONTPATH";
 		if(substr($this->fontpath,-1)!='/' && substr($this->fontpath,-1)!='\\')
 			$this->fontpath .= '/';
 	}

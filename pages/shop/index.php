@@ -45,7 +45,7 @@
                 <p><?php echo $product['price'];?></p>
                 <span><?php echo $product['availability']; ?></span>
                 <?php
-                $_SESSION['secure_id'] = rand(10000,2558897970000);
+                $_SESSION['secure_id'] = rand(145045870,255889797745989500);
                 $secureID = $product['product_id']*$_SESSION['secure_id'];
                 
                 ?>

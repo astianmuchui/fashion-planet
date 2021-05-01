@@ -33,10 +33,10 @@ textarea{
 }
 .btn{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     background-color: #ee5965;
     border: 1px solid #ee5965;
-    border-radius: 5%;
+    border-radius: 5px;
     padding: 10px 20px;
     width: 90%;
 }

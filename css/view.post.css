@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+    width: 100%;
+    height: max-content;
+}
+.post{
+    width: 99%;
+    height: max-content;
+}
+.post p{
+    width: 80%;
+}
+

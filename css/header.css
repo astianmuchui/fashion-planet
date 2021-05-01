@@ -45,35 +45,57 @@ header nav{
 footer .links ul{
     display: block;
 }
+
+footer li{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+footer .links ul li{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
 footer div{
-    width: 25%;
+    width: 20%;
+}
+footer i{
+    color: #ee5965;
+}
+footer *:hover{
+    color: #ee5965;
 }
 footer *{
     color: #fff;
-    text-transform: capitalize;
+
 }
 footer a{
-    font-size: 14px;
+    font-size: 12px;
 }
 footer h4{
     color: #ee5965;
     font-size: 20px;
 }
+
 .newsletter form .input{
+    text-transform: lowercase;
     width: 250px;
-    height: 45px;
+    height: 35px;
     margin-right: -3px;
-    border-color: white;
-    border-radius: 100px 0 0 100px;
+    border-color: transparent;
     padding: 1px;
     color: black;
     text-align: center;
+    border-radius: 50px;
 }   
 .newsletter form .submit{
+    border-radius: 50px;
     background-color: #ee5965;
     border: #ee5965;
-    height: 53px;
-    width: 70px;
-    border-radius: 0 100px 100px 0;
+    height: 31px;
+    width: 255px;
     text-align: center;
+    margin-top: 10px;
+}
+.newsletter form .submit:hover{
+    color: #fff;
 }

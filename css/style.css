@@ -1,7 +1,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(255, 255, 255);
     overflow-x: hidden;
 }
     html{
@@ -45,10 +45,10 @@ header nav{
      padding-top: 20px;
      height: 100vh;
      width: 100%;
-     background: url(../images/pexels-flat-hito-904350.jpg) no-repeat;
+     background: url(../images/creative-headline-APNnyM36puU-unsplash.jpg) no-repeat;
      background-size: cover;
      
-     background-position-y: -550px;
+     background-position-y: -180px;
      display: flex;
      flex-direction: column;
      /* align-content: ; */
@@ -58,9 +58,9 @@ header nav{
  }
 main p{
     margin: 10% 0 0 2%;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 300;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 116, 116);
     text-transform: uppercase;
     
 }
@@ -70,7 +70,7 @@ main p{
 }
 main span {
     margin: 10% 0 0 2%;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 300;
     color: #ee5965;
     text-transform: uppercase;
@@ -95,7 +95,7 @@ main span {
 }
 
 .section-one{
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(255, 255, 255);
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -148,7 +148,7 @@ main span {
     justify-content: center;
     width: max-content;
     height: max-content;
-    background-color: #fff;
+    background-color: #f5f5f5;
     padding-bottom: 9px;
     border-radius: 3px;
 }
@@ -167,8 +167,9 @@ main span {
 }
 .blog{
     height: max-content;
+    margin-bottom: 10px;    
     width: 100%;
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,7 +191,7 @@ main span {
     grid-gap: 10px;
 }
 .post{
-    background-color: #fff;
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,10 +233,15 @@ main span {
     border: 1px solid   #ee5965;
     border-radius: 3px;  
     padding: 3px 5px;  
+    background-color: transparent;
+}
+.form-container form input:last-child{
+    background-color: #ee5965;
 }
 label{
     color: #ee5965;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 ::placeholder{
     color: #ee5965;
@@ -247,6 +253,52 @@ label{
     border: 1px solid   #ee5965;
     border-radius: 3px;  
     padding: 3px 5px;  
+    background-color: transparent;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+}
+.about article{
+    font-size: 16px;
+    margin: 10px 10px;
+}
+.values-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5px;
+    width: 90vw;
+    position: relative;
+
+}
+.values-container div{
+    background: transparent;
+    height: 170px;
+    width: 30vw;
+    border-right: 2px solid rgb(255, 130, 130);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.values-container div:last-child{
+    border-right: none;
+}
+.values-container div span{
+    color: #ee5965;
+    font-size: 20px;
+}
+.values-container div i:hover{
+    color: #ee5965;
+    transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transform: rotateY(360deg);
 }
 footer{
     width: 100%;
@@ -260,16 +312,32 @@ footer{
 }
 footer .links ul{
     display: block;
+    
 }
+footer li{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+footer .links ul li{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
 footer div{
-    width: 25%;
+    width: 20%;
+}
+footer i{
+    color: #ee5965;
+}
+footer *:hover{
+    color: #ee5965;
 }
 footer *{
     color: #fff;
-    text-transform: capitalize;
+
 }
 footer a{
-    font-size: 14px;
+    font-size: 12px;
 }
 footer h4{
     color: #ee5965;
@@ -277,20 +345,25 @@ footer h4{
 }
 
 .newsletter form .input{
+    text-transform: lowercase;
     width: 250px;
-    height: 45px;
+    height: 35px;
     margin-right: -3px;
     border-color: transparent;
-    border-radius: 100px 0 0 100px;
     padding: 1px;
     color: black;
     text-align: center;
+    border-radius: 50px;
 }   
 .newsletter form .submit{
+    border-radius: 50px;
     background-color: #ee5965;
     border: #ee5965;
-    height: 53px;
-    width: 70px;
-    border-radius: 0 100px 100px 0;
+    height: 31px;
+    width: 255px;
     text-align: center;
+    margin-top: 10px;
+}
+.newsletter form .submit:hover{
+    color: #fff;
 }

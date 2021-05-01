@@ -1,5 +1,5 @@
-<?php
-    
+
+<?php    
     require './fpdf.php';
     class myPDF extends FPDF{
         function Fetch(){

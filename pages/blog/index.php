@@ -32,9 +32,11 @@
             <div class="article">
                 <h3><?php echo $post['title']; ?></h3>
                 <article>
-                    <?php echo $post['content'] ?> <br>
+                    <?php $wrapped = wordwrap($post['content'],200,"\r\n") ?>
+                    <?php echo $wrapped;?> <br>
                     <small><?php echo "by".$post['author']; ?></small> <br>
                     <small><?php echo "on".$post['created_at']; ?></small> <br>
+                    <a href="../view-post/?id=<?php echo $post['id']; ?>" class="btn-white">View</a>
                 </article>
             </div>
         </div>

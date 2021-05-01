@@ -48,7 +48,7 @@
                                 
                                 foreach($queries as $query):
                                 $action = mysqli_query($conn,$query); 
-                            endforeach; 
+                                endforeach; 
                                 if($action){
                                     redirect();
                                 }else{
@@ -72,7 +72,7 @@
                     echo 'Invalid file format';
                 }
             }else{
-                echo 'Document Required';
+                echo 'image Required';
             }
         }else{
             print_r($errors);
