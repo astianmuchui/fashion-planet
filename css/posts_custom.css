@@ -29,17 +29,18 @@ body{
 .post{
     width: 80%;
     background-color: #fd7272;
-    height: 500px;
+    height: 530px;
     display: inline-flex;
     text-align: center;
 
 }
 .post img{
-    height: 500px;
-    width: 500px;
+    height: 530px;
+    width: 530px;
 }
 .post .article{
     margin-left: 5%;
+    margin-bottom: 2%;
     display: flex;
     flex-direction: column;
     align-content: center;

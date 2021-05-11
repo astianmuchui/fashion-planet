@@ -147,7 +147,9 @@
                         <option value="makeup">Makeup</option>
                         <option value="clothing">Clothing</option>
                         <option value="accesories">Accesories</option>
-
+                        <option value="Tshirts">Tshirts</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="jewellery">Jewellery</option>
                     </select>
                     
                     <input type="password" name="pass" id="" placeholder="Enter your password" autocomplete="off" required>

@@ -4,7 +4,7 @@
         $error_message = "";
         if($_GET['error_id'] == "725"){
             $error_message = "The email ".$_SESSION['subscriber']." is Already registered ,please try another one";
-        }
+        }   
     }else{
         header("Location: ../../");
     }

@@ -11,7 +11,6 @@
         header("Location: ../blog");
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,10 +28,10 @@
     ?>
     <div class="container">
     <div class="post">
-        <img src="<?php echo $img_url; ?>" alt="" width="90%" height="40%">
+        <img src="<?php echo $img_url; ?>" alt="" width="90%" height="30%">
         <p><?php echo $post['content']; ?></p>
     </div>
     </div>
-    
+    <?php include '../../includes/footer.html'; ?>
 </body>
 </html>

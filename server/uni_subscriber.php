@@ -1,18 +1,17 @@
 <?php
     //Make subscription from anywhere in the website
     session_start();
-      require './database.php';
+    require '../server/database.php';
     $_SESSION['subscriber'] = $subscribed_email = mysqli_real_escape_string($conn,trim($_POST['nws_email']));
-
     if(filter_var($subscribed_email, FILTER_VALIDATE_EMAIL)){
-      $sql = "SELECT * FROM receivers WHERE email = '$subscribed_email'";
-      $result = mysqli_query($conn,$query);
-      if(mysqli_fetch_assoc($result) == false){
-          $query = "INSERT INTO receivers (`email`) VALUES('$subscribed_email')";
-          $action = mysqli_query($conn,$query);
-      }else{
-          header("Location: ./pages/error/?error_id=725");
-      }
+        $sql = "SELECT * FROM receivers WHERE email = '$subscribed_email'";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_fetch_assoc($result) == false){
+            $query = "INSERT INTO receivers (`email`) VALUES('$subscribed_email')";
+            $action = mysqli_query($conn,$query);
+        }else{
+            header("Location: ../pages/error/?error_id=725");
+        }
         if($action){
           $company_name = "I&j closet";
           $company_email = "i&jcloset@gmail.com";

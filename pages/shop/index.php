@@ -1,11 +1,15 @@
 <?php 
     session_start();
     require '../../server/database.php';
+    global $conn;
     $query = "SELECT * FROM products ORDER BY product_id desc";
     $result = mysqli_query($conn,$query);
     $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
     mysqli_free_result($result);
     mysqli_close($conn);
+    //Search product.
+    #It is completely imperative that the user can search by category/ name
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +29,9 @@
                 <h1>All products</h1>
             </div>
             <div class="search">
-                <form action="#" method="post">
+                <form action="./results.php" method="post">
                     <input type="text" name="searched" placeholder="search" id="" required>
-                    <input type="submit" value="Search">
+                    <input type="submit" value="Search" name="submit">
                 </form>
             </div>
         </div>

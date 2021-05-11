@@ -6,9 +6,7 @@
     $goods = mysqli_fetch_all($result,MYSQLI_ASSOC);
     mysqli_free_result($result);
     mysqli_close($conn);
-
     //Contact form
-
     if(isset($_POST['submit'])){
         $name = mysqli_real_escape_string($conn,$_POST['name']);
         $email = mysqli_real_escape_string($conn,$_POST['email']);
@@ -16,10 +14,7 @@
         $message  = mysqli_real_escape_string($conn,$_POST['message']);
         require './server/contact_form.php';
     }
-
-
     //Subscribe
-
     if(isset($_POST['subscribe'])){
         $subscribed_email = mysqli_real_escape_string($conn,trim($_POST['nws_email']));
         require './server/make_subscription.php';
@@ -33,43 +28,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <title>I&J | Welcome</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <title> I&J | Welcome </title>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="./"><img src="./images/logo.png" height="47" width="166.66" alt=""></a>
-
         </div>
-
         <nav>
             <ul>
                 <li><a href="./">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="./pages/blog/">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="./pages/shop/">Products</a></li>
             </ul>
         </nav>
     </header>
-
-
-
-
-
+    <!-- Responsive menu -->
+    <header class="header2">
+        <div class="logo">
+            <img src="./images/logo.png" height="40" width="120" alt="">
+        </div>
+        <div class="lines" id="lines">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <div class="mymenu" id="menu">
+        <menu  class="menu">
+        <span id="cancel" >&times;</span>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./#about-us">About</a></li>
+                    <li><a href="./blog">Blog</a></li>
+                    <li><a href="./index.php#contact">Contact</a></li>
+                    <li><a href="./shop">Products</a></li>
+                </ul>
+            </nav>
+        </menu>
+    </div>
     <main>
         <div class="intro">
             <p>A closet </p>
-            <span class="txt-type" data-wait="500" data-words='["Like you  never seen before " , "With a taste of class "]'></span>
+            <span class="txt-type" data-wait="500" data-words='["Like you never seen before " , "With a taste of class "]'></span>
         </div>
-
         <a href="http://wa.me/254706674641" class="action-btn">Order Now</a>
-
     </main>
-
     <section class="section-one" id="products">
         <h1>Newest Arrivals</h1>
-
         <div class="products-container" >
         <?php foreach($goods as $product):?>
             <?php
@@ -89,11 +99,9 @@
             </div>
             <?php endforeach; ?>
         </div>
-
     </section>
     <section class="blog" id="blog">
         <h1>Our latest posts</h1>
-
         <div class="posts" >
             <?php require './server/get_latest_posts.php'; ?>
             <?php foreach ($posts as $post):?>
@@ -102,14 +110,12 @@
                 <img src="<?php echo $URL_IMG; ?>" alt="Image">
                 <p><?php echo $post['title']; ?></p>
                 <div class="border"></div>
-                <a href="#" class="red-btn">View post</a>
+                <a href="./pages/view-post/?id=<?php echo $post['id']; ?>" class="red-btn">View post</a>
             </div>
             <?php endforeach; ?>
-
         </div>
-
     </section>
-    <section class="about">
+    <section class="about" id="about-us">
          <h3>About Us</h3>
           <article>
             I&j closet is a shopping agency located in Narok,Kenya.With customers from all over the country
@@ -171,7 +177,7 @@
             <h4>Quick links</h4>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about-us">About</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="./pages/shop/">Products</a></li>
@@ -206,6 +212,10 @@
             </form>
         </div>
     </footer>
+    <div class="dev">
+        <small>Powered by <a href="#">Seb Astian</a></small>
+    </div>
+    <script src="./js/min.js"></script>
     <script src="./js/font_awesome_main.js"></script>
     <script src="./js/type_min.js"></script>
 </body>

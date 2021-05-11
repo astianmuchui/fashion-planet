@@ -17,7 +17,7 @@ const TypeWriter = function(txtElement, words, wait = 3000) {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-    let typeSpeed = 200;
+    let typeSpeed = 100;
     if(this.isDeleting) {
       typeSpeed /= 2;
     }
